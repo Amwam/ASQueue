@@ -21,4 +21,37 @@
     return self;
 }
 
+
+-(void)enqueue:(id)_object
+{
+    [objects addObject:_object]; //Add the object to the end of the queue
+}
+
+-(id)dequeue
+{
+    //get the object and increase the retain count
+    id returnObj = [[objects objectAtIndex:0] retain];
+    
+    //remove it from the queue
+    [objects removeObjectAtIndex:0];
+    
+    return returnObj; //return
+}
+
+-(int)count
+{
+    return ((int)[objects count]);
+}
+
+-(id)peek
+{
+    return [objects objectAtIndex:0];
+}
+
+-(void)dealloc
+{
+    [objects release];
+    [super dealloc];
+}
+
 @end
