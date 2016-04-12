@@ -1,5 +1,7 @@
 # ASQueue
 
+# This has been discontinued, and should not be used
+
 ##An Objective-C Queue data structure
 
 Allows for basic Queue operations in Objective-C
